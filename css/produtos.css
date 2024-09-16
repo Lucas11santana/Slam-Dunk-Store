@@ -1,0 +1,182 @@
+body { /* Gradiente de fundo para o body */
+    background: white; 
+    margin: 0; 
+    padding: 0; 
+    min-height: 100vh; 
+    background-attachment: fixed; 
+  }
+  /*................................................................NavBar...................................................*/
+  nav {/* Navegação  do menu principal*/
+    background: rgb(95, 95, 95);
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    margin-bottom: 90px;
+    
+  }
+  nav .links a{ /* TEXTOS da navegação */
+    font-family: 'roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin: 25px;
+    position: relative;
+    padding: -10px;
+  }
+  nav .links a::after{ /* EFEITO DE TRANSCIÇÃO JUNTO COM HOVER*/
+    content: " ";
+    width: 0;
+    height: 4px;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s ease-in-out;
+  }
+  nav .links a:hover{
+    color: rgb(218, 217, 217);
+  }
+  nav .links a:hover:after{
+    width: 100%;
+  }
+  nav .logo img { /* LogoTIPO */
+    height: 70px;
+    width: 125px;
+    background: none; 
+    display: block;
+  }
+  nav .icon-links {
+    display: flex;
+    gap: 20px; /* Adiciona espaçamento entre os ícones */
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    align-items: center; /* Alinha verticalmente os ícones */
+    padding-right: 20px; 
+  }
+  nav .icon-links a{
+    color: white;
+  }
+  nav .icon-links a:hover{
+    color: gray;
+  }
+
+/*..............................................CAIXA DE BUSCA (PROJETO FUTURO)...............................................*/
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #f4f2f2;
+  border: none;
+  color: #646464;
+  padding: 0.7rem ;
+  border-radius: 30px;
+  width: 20em;
+  transition: all ease-in-out .5s;
+  margin-right: -2rem;
+}
+
+.search__input:hover, .search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search__input:focus + .search__button {
+  background-color: #f0eeee;
+}
+
+.search__button {
+  border: none;
+  background-color: #f4f2f2;
+  margin-top: .1em;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
+}
+
+/*................................................................TEXTO (ESCOLHA SEU TIME!)..................................................................*/
+
+.escolha-time{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  font-family: 'roboto', sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: rgb(77, 76, 76);
+}
+.escolha-time::after{
+  content: '';
+  background: black;
+  width: 120px;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.time {
+  padding-top: 100px;
+}
+
+.brands {
+  margin-top: 50px; /* Espaçamento acima da .brands */
+  margin-bottom: 50px; /* Espaçamento abaixo da .brands */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaçamento entre os logos */
+}
+
+.nba {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Espaçamento entre os logos na linha */
+}
+
+.nba-logos {
+  flex: 0 1 calc(100% / 30); /* Agora, 30 itens por linha */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nba-logos img {
+  max-width: 350px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.nba-logos img:hover{
+  transform: scale(1.2);
+}
+

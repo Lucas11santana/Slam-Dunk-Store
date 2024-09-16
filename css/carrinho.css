@@ -1,0 +1,245 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 100px;
+    background: #333;
+    /* Evitar sobreposição da navbar */
+}
+
+/* Navbar */
+nav {
+    background: rgb(95, 95, 95);
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+nav .links a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin: 25px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav .links a:hover {
+    color: rgb(218, 217, 217);
+}
+
+nav .logo img {
+    height: 70px;
+    width: 125px;
+}
+
+nav .icon-links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+nav .icon-links a {
+    color: white;
+}
+
+nav .icon-links a:hover {
+    color: gray;
+}
+
+/* Caixa de busca */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search__input {
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem;
+    border-radius: 30px;
+    width: 20em;
+    margin-right: -2rem;
+}
+
+.search__button {
+    border: none;
+    background-color: #f4f2f2;
+}
+
+.search__button:hover {
+    cursor: pointer;
+}
+/*..............................................................................Carrinho.................................................................*/
+
+
+/* Estilo geral do carrinho */
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color:rgb(95, 95, 95) ; /* Fundo cinza claro */
+}
+
+/* Contêiner dos itens do carrinho */
+.cart-items {
+    width: 70%; /* Ajusta a largura para dar mais espaço aos itens */
+}
+
+/* Cabeçalhos dos itens do carrinho */
+.cart-items h2 {
+    color: white;
+    font-family: 'roboto',sans-serif;
+    display: inline-block; /* Faz com que os cabeçalhos fiquem em linha */
+    width: 20%; /* Largura de cada cabeçalho */
+    text-align: justify; /* Centraliza o texto */
+    font-size: 16px; /* Tamanho do texto do cabeçalho */
+    margin: 0; /* Remove o margin padrão */
+    padding: 5px;
+    
+}
+
+/* Estilo do resumo do carrinho */
+.cart-summary {
+    width: 20%; /* Largura do resumo do carrinho */
+    background-color: gray; /* Fundo cinza claro */
+    padding: 20px;
+    font-family: 'roboto',sans-serif;
+    border: 1px solid #ddd; /* Borda cinza claro */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Cabeçalhos do resumo do carrinho */
+.cart-summary h2 {
+    font-size: 24px; /* Tamanho do texto do cabeçalho */
+    margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+}
+
+/* Estilo dos itens do carrinho */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    margin: 30px 0;
+    font-family: 'roboto',sans-serif;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black; /* Borda cinza claro */
+    background-color: white; /* Fundo branco para os itens */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo da imagem do produto */
+.cart-item img {
+    width: 130px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da altura */
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
+    margin-right: 20px; /* Espaçamento à direita da imagem */
+}
+
+/* Contêiner para rótulos e valores */
+.cart-item-info {
+    flex: 1; /* Faz com que os detalhes ocupem o espaço restante */
+}
+
+/* Cabeçalhos dos detalhes do item */
+.cart-item-info > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Rótulos (h2) */
+.cart-item-info h2 {
+    font-size: 16px; /* Tamanho do texto do rótulo */
+    color: #333; /* Cor do texto do rótulo */
+    
+}
+
+/* Valores dos produtos */
+.cart-item-info .value {
+    font-size: 16px; /* Tamanho do texto dos valores */
+    color: #555; /* Cor do texto dos valores */
+    
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Remove spinners no Firefox */
+    -webkit-appearance: none; /* Remove spinners no Chrome, Safari, e Edge */
+    appearance: textfield; /* Padrão genérico para navegadores modernos */
+}
+
+/* Para garantir que os spinners sejam completamente removidos no Chrome */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha os itens com espaçamento entre eles */
+    margin-top: 10px; /* Espaçamento acima da quantidade */
+}
+
+/* Input de quantidade */
+.cart-item-quantity input {
+    width: 50px; /* Largura do input */
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd; /* Borda cinza claro */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Botões de quantidade */
+.cart-item-quantity button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px; /* Bordas arredondadas */
+}
+.cart-item-quantity input[type="number"] {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+}
+
+.cart-item-quantity button:hover {
+    background-color: #ddd;
+}
+
+/* Botão de remoção do item */
+.cart-item-remove {
+    background-color: red; /* Vermelho para o botão de remoção */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-family: 'roboto',sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-left: 20px; /* Espaço à esquerda do botão de remoção */
+}
+
+.cart-item-remove:hover {
+    background-color: #9c0500; /* Vermelho escuro ao passar o mouse */
+}

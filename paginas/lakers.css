@@ -1,0 +1,238 @@
+body { /* Gradiente de fundo para o body */
+    background: linear-gradient(to left, #552583, #FDB927);
+    margin: 0; 
+    padding: 0; 
+    min-height: 100vh;
+  }
+  /*................................................................NavBar...................................................*/
+  nav {/* Navegação  do menu principal*/
+    background: rgba(95, 95, 95); 
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000; 
+  }
+  nav .links a{ /* TEXTOS da navegação */
+    font-family: 'roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin: 25px;
+    position: relative;
+    padding: -10px;
+  }
+  nav .links a::after{ /* EFEITO DE TRANSCIÇÃO JUNTO COM HOVER*/
+    content: " ";
+    width: 0;
+    height: 4px;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s ease-in-out;
+  }
+  nav .links a:hover{
+    color: rgb(218, 217, 217);
+  }
+  nav .links a:hover:after{
+    width: 100%;
+  }
+  nav .logo img { /* LogoTIPO */
+    height: 70px;
+    width: 125px;
+    background: none; 
+    display: block;
+  }
+  nav .icon-links {
+    display: flex;
+    gap: 20px; /* Adiciona espaçamento entre os ícones */
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    align-items: center; /* Alinha verticalmente os ícones */
+    padding-right: 20px; 
+  }
+  nav .icon-links a{
+    color: white;
+  }
+  nav .icon-links a:hover{
+    color: gray;
+  }
+/*................................................................PRODUTOS...............................................................*/
+.nome{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: rgb(77, 76, 76);
+  }
+  .nome::after{
+    content: '';
+    background: #552583;
+    width: 95px;
+    height: 7px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .time {
+    padding-top: 100px;
+    background: white; /* Cinza claro */
+    width: 75%; /* Ocupa entre 60% e 70% da largura */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding-bottom: 100px;
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+  }
+  .time #lakers{
+    width: 60px;
+    margin-top: -70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .organizar {
+    display: flex;
+    gap: 20px; 
+    
+    align-content: center;
+  }
+  .card {
+    box-sizing: border-box;
+    margin-top: 70px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 350px;
+    height: 460px;
+    border: 1px solid #ddd;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+  }
+  .navegação {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 110px;
+    width: 100%;
+  }
+  .card .produto-info {
+    display: flex;
+    flex-direction: column; /* Coloca o texto, o preço e os ícones em coluna */
+    align-items: flex-start; /* Alinha o texto e o preço à esquerda */
+  }
+  
+  .card .produto-nome {/*textos*/
+    font-family: 'Poppins',sans-serif;
+    text-align: justify;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #000; /* Define a cor do texto */
+  }
+  
+  .card .preco {
+    font-family: 'Poppins',sans-serif;
+    margin-top: 5px; /* Adiciona um pequeno espaçamento acima do preço */
+    text-align: justify;
+    font-size: 16px;
+    color: #333; /* Define a cor do texto para o preço */
+  }
+  
+  .card .icones {
+    text-align: right;
+    margin-top: 10px; /* Adiciona espaçamento acima dos ícones */
+    margin-right: 10px; /* Afasta os ícones da margem direita da box */
+  }
+  
+  .card .icon {
+    margin-left: 10px; /* Adiciona espaçamento entre os ícones */
+    color: #666; /* Define a cor dos ícones */
+    font-size: 18px; /* Aumenta o tamanho dos ícones */
+  }
+  
+  .card .icon:hover{
+    color: black;
+    cursor: pointer;
+  }
+  .imagens-produto {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .imagens-produto input { /* Esconde os inputs de rádio */
+    display: none;
+  }
+  .slides {
+    display: flex;
+    width: 300%; /* Ajusta para 3 imagens */
+    transition: margin-left 0.3s ease; /* Transição rápida */
+  }
+  
+  .slide {
+    width: 33.3333%; /* Ajusta cada slide para 1/3 do total */
+  }
+  
+  .slide img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+/*................................................Produtos de uma SÓ IMAGEM.......................................................*/
+
+/*................................................................................................................................*/
+  .bar { /* Barrinha de navegação */
+    width: 40px;
+    height: 7px;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .bar:hover { /* HOVER da barrinha de navegação */
+    background-color: white;
+  }
+  
+  /* Ajuste da margem dos slides para as imagens correspondentes */
+  #slide1:checked ~ .slides {
+    margin-left: 0%;
+  }
+  
+  #slide2:checked ~ .slides {
+    margin-left: -100%; /* Move para a segunda imagem */
+  }
+  
+  #slide3:checked ~ .slides {
+    margin-left: -200%; /* Move para a terceira imagem */
+  }
+  
+  #slide4:checked ~ .slides {
+    margin-left: 0%;
+  }
+  
+  #slide5:checked ~ .slides {
+    margin-left: -100%; /* Move para a segunda imagem */
+  }
+  
+  #slide6:checked ~ .slides {
+    margin-left: -200%; /* Move para a terceira imagem */
+  }
+
+  #slide7:checked ~ .slides {
+    margin-left: 0%; /* Move para a segunda imagem */
+  }
+  
+  #slide8:checked ~ .slides {
+    margin-left: -100%; /* Move para a terceira imagem */
+  }

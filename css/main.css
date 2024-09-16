@@ -1,0 +1,664 @@
+body {
+  /* Gradiente de fundo para o body */
+  background: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/*................................................................NavBar...................................................*/
+nav {
+  /* Navegação  do menu principal*/
+  background: rgb(95, 95, 95);
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  margin-bottom: 90px;
+
+}
+
+nav .links a {
+  /* TEXTOS da navegação */
+  font-family: 'roboto', sans-serif;
+  text-decoration: none;
+  color: white;
+  margin: 25px;
+  position: relative;
+  padding: 10px;
+}
+
+nav .links a::after {
+  /* EFEITO DE TRANSCIÇÃO JUNTO COM HOVER*/
+  content: " ";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s ease-in-out;
+}
+
+nav .links a:hover {
+  color: rgb(218, 217, 217);
+}
+
+nav .links a:hover:after {
+  width: 100%;
+}
+
+nav .logo img {
+  /* LogoTIPO */
+  height: 70px;
+  width: 125px;
+  background: none;
+  display: block;
+}
+
+nav .icon-links {
+  display: flex;
+  gap: 20px;
+  /* Adiciona espaçamento entre os ícones */
+  justify-content: flex-end;
+  /* Alinha os ícones à direita */
+  align-items: center;
+  /* Alinha verticalmente os ícones */
+  padding-right: 20px;
+}
+
+nav .icon-links a {
+  color: white;
+}
+
+nav .icon-links a:hover {
+  color: gray;
+}
+
+
+/*..............................................CAIXA DE BUSCA (PROJETO FUTURO)...............................................*/
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.search__input {
+  font-family: 'roboto',sans-serif;
+  font-size: inherit;
+  background-color: #f4f2f2;
+  border: none;
+  color: #646464;
+  padding: 0.7rem;
+  border-radius: 30px;
+  width: 20em;
+  transition: all ease-in-out .5s;
+  margin-right: -2rem;
+}
+
+.search__input:hover,
+.search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search__input:focus+.search__button {
+  background-color: #f0eeee;
+}
+
+.search__button {
+  border: none;
+  background-color: #f4f2f2;
+  margin-top: .1em;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
+}
+
+/*.................................................BOLINHA NO ICONE DE CARRINHO DE COMPRA (IMPORTANTE)...................................................................*/
+
+/* Bolinha de notificação no ícone do carrinho */
+#cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  display: none; /* Escondido inicialmente */
+}
+
+/* Mostrar bolinha quando houver itens no carrinho */
+.cart-count.active {
+  display: flex;
+}
+
+
+/*.................................................BOLINHA NO ICONE DE CARRINHO DE COMPRA (IMPORTANTE)...................................................................*/
+
+
+/*.............................................Display de Imagens.........................................................*/
+
+.slider {
+  padding-top: 90px;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.slides {
+  display: flex;
+  width: 100%; /* 3 slides, cada um 100% */
+  animation: slide 15s infinite; /* Animação contínua de 15 segundos */
+}
+
+.slide_img {
+  width: 300%;
+  flex: 1 0 100%;
+}
+
+.slide_img img {
+  width: 100%;
+  height: 60vh; /* Ajusta a altura para 65% da viewport */
+}
+
+/* Animação do slider */
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  85% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+
+/*..............................................(LOGOS DA NBA em grayscale)..............................................*/
+
+.brands {
+  margin-top: 50px;
+  /* Espaçamento acima da .brands */
+  margin-bottom: 50px;
+  /* Espaçamento abaixo da .brands */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Espaçamento entre os logos */
+}
+
+.nba {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Espaçamento entre os logos na linha */
+}
+
+.nba-logos {
+  flex: 0 1 calc(100% / 30);
+  /* Agora, 30 itens por linha */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nba-logos img {
+  max-width: 100px;
+  /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: transform 0.5s ease;
+}
+
+.nba-logos img:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+
+
+/*...................................................TEXTO ("EM DESTAQUE")...................................................*/
+.avaliacoes {
+  justify-content: center;
+  align-items: center;
+  font-family: 'roboto', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: rgb(77, 76, 76);
+}
+
+.avaliacoes::after {
+  content: '';
+  background: black;
+  width: 120px;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*.................................PRODUTOS (IMPORTANTE)(do EM DESTAQUE e LINHA RETRO).............................................................*/
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #333;
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 7px;
+  width: 370px;
+  text-align: center;
+  position: relative;
+  font-family: 'roboto', sans-serif;
+  border-radius: 30px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+.image-container {
+  position: relative;
+  width: 90%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.color-button {
+  margin-bottom: 30px;
+  width: 25px;
+  height: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30%;
+}
+
+.color-button:hover {
+  transform: scale(1.1);
+}
+
+.price {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.product-name {
+  font-size: 19px;
+  margin: 10px 0;
+  text-decoration: none;
+  font-family: 'Poppins' sans-serif;
+  color: #333;
+}
+
+.product-name:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.icon-cart,
+.icon-heart {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon-cart {
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 50%;
+}
+
+.icon-cart:hover {
+  transform: scale(1.1);
+  box-shadow: black;
+  /* Efeito de círculo azul */
+}
+
+.icon-heart:hover {
+  color: red;
+}
+
+.product-image[data-active="true"] {
+  display: block;
+}
+
+/*..............................................................TEXTO (AVALIAÇÕES)..........................................................*/
+
+.avaliações {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'roboto', sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: rgb(77, 76, 76);
+  margin-bottom: -20px;
+}
+
+.avaliações::after {
+  content: '';
+  background: rgb(0, 47, 255);
+  width: 95px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*..............................................................FeedBack...........................................................*/
+/* Estilização geral da estrutura */
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.organiza {
+  width: 90%;
+  /* Mantém um espaçamento confortável nas laterais */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Exibe 4 comentários lado a lado */
+  gap: 25px;
+}
+
+/* Estilização de cada card de review */
+.card0 {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.card0:hover {
+  transform: translateY(-10px);
+  /* Pequeno efeito ao passar o mouse */
+}
+
+/* Estilização da imagem com borda */
+.card0 .img img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid black;
+  /* Borda com cor temática de basquete (amarelo) */
+}
+
+/* Estilização do texto */
+.card0 h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.card0 span {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+  text-align: justify;
+  max-width: 90%;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* Estilização da área de rating */
+.rating {
+  margin-top: 10px;
+}
+
+.rating i {
+  color: #fbc02d;
+  /* Cor da estrela temática */
+  font-size: 1.2em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel {
+    grid-template-columns: 1fr;
+    /* Exibe um comentário por linha no celular */
+  }
+
+  .card0 {
+    width: 100%;
+  }
+}
+
+
+/*..............................................................Marcas...........................................................*/
+/*.............................................................footer...........................................................*/
+
+/* Estilo geral do footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.container-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+.logo-footer {
+  width: 120px;
+  /* Ajuste o tamanho do logo */
+  height: auto;
+}
+
+.row3 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.playstore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.playstore-button:hover {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.texts {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.text-1 {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-2 {
+  font-weight: 600;
+}
+
+/* Social Icons */
+.social-icons {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%);
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  filter: none;
+  transform: scale(1.1);
+}

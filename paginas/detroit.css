@@ -1,0 +1,337 @@
+body {
+    /* Gradiente de fundo para o body */
+    background: linear-gradient(to left, #006BB6, #ED174C);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-attachment: fixed;
+
+}
+
+/*................................................................NavBar...................................................*/
+nav {
+    /* Navegação  do menu principal*/
+    background: rgb(95, 95, 95);
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+nav .links a {
+    /* TEXTOS da navegação */
+    font-family: 'roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin: 25px;
+    position: relative;
+    padding: 10px;
+}
+
+nav .links a::after {
+    /* EFEITO DE TRANSCIÇÃO JUNTO COM HOVER*/
+    content: " ";
+    width: 0;
+    height: 4px;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s ease-in-out;
+}
+
+nav .links a:hover {
+    color: rgb(218, 217, 217);
+}
+
+nav .links a:hover:after {
+    width: 100%;
+}
+
+nav .logo img {
+    /* LogoTIPO */
+    height: 70px;
+    width: 125px;
+    background: none;
+    display: block;
+}
+
+nav .icon-links {
+    display: flex;
+    gap: 20px;
+    /* Adiciona espaçamento entre os ícones */
+    justify-content: flex-end;
+    /* Alinha os ícones à direita */
+    align-items: center;
+    /* Alinha verticalmente os ícones */
+    padding-right: 20px;
+}
+
+nav .icon-links a {
+    color: white;
+}
+
+nav .icon-links a:hover {
+    color: gray;
+}
+
+/*..............................................CAIXA DE BUSCA (PROJETO FUTURO)...............................................*/
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem;
+    border-radius: 30px;
+    width: 20em;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+}
+
+.search__input:hover,
+.search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+}
+
+.search__input::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #ccc;
+}
+
+.search__input:focus+.search__button {
+    background-color: #f0eeee;
+}
+
+.search__button {
+    border: none;
+    background-color: #f4f2f2;
+    margin-top: .1em;
+}
+
+.search__button:hover {
+    cursor: pointer;
+}
+
+.search__icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #b4b4b4;
+}
+
+/*.................................................BOLINHA NO ICONE DE CARRINHO DE COMPRA (IMPORTANTE)...................................................................*/
+
+/* Bolinha de notificação no ícone do carrinho */
+#cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    display: none;
+    /* Escondido inicialmente */
+}
+
+/* Mostrar bolinha quando houver itens no carrinho */
+.cart-count.active {
+    display: flex;
+}
+
+
+/*.................................................BOLINHA NO ICONE DE CARRINHO DE COMPRA (IMPORTANTE)...................................................................*/
+/*...........................................................TEXTO (NOME DO TIME e BOX (QUADRADO BRANCO) )...............................................................*/
+.time {
+    margin-top: 20px;
+    padding-top: 100px;
+    background: white;
+    /* Cinza claro */
+    width: 75%;
+    /* Ocupa entre 60% e 70% da largura */
+    margin: 0 auto;
+    /* Centraliza o contêiner */
+    padding-bottom: 100px;
+    border-radius: 5px;
+    /* Adiciona bordas arredondadas */
+}
+
+.time #nba {
+    width: 70px;
+    height: 55px;
+    margin-top: -70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nome {
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: rgb(77, 76, 76);
+}
+
+.nome::after {
+    content: '';
+    background: #006BB6;
+    width: 120px;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*.................................PRODUTOS (IMPORTANTE)(do EM DESTAQUE e LINHA RETRO).............................................................*/
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    overflow: hidden;
+    margin: 7px;
+    width: 380px;
+    text-align: center;
+    position: relative;
+    font-family: 'roboto', sans-serif;
+    border-radius: 30px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.image-container {
+    position: relative;
+    width: 90%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.color-button {
+    margin-bottom: 30px;
+    width: 25px;
+    height: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30%;
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+}
+
+.price {
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.product-name {
+    font-size: 19px;
+    margin: 10px 0;
+    text-decoration: none;
+    font-family: 'Poppins' sans-serif;
+    color: #333;
+}
+
+.product-name:hover {
+    text-decoration: underline;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.icon-cart,
+.icon-heart {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-cart {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 50%;
+}
+
+.icon-cart:hover {
+    transform: scale(1.1);
+    box-shadow: black;
+    /* Efeito de círculo azul */
+}
+
+.icon-heart:hover {
+    color: red;
+}
+
+.product-image[data-active="true"] {
+    display: block;
+}
